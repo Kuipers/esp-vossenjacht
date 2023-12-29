@@ -1,0 +1,57 @@
+# Add simple question with a code. When the aswer is correct, the code is shown.
+# When the answer is wrong, a red screen is shown and the scout can try again.
+POST http://1.2.3.4/update HTTP/1.1
+content-type: application/json
+
+{
+	"ssid": "vos 1",
+	"led": true,
+	"interval": 0,
+    "question": "In welk jaar is scouting Riel opgericht?</br>A. 1985</br>B. 2020</br>C. 1986",
+    "answer": "a",
+    "code": "Onthoud deze code: 5"
+}
+
+# Add more advanced question with a code. When the aswer is correct, the code is shown.
+# When the answer is wrong, a green screen is shown and the code_wrong is shown.
+POST http://1.2.3.4/update HTTP/1.1
+content-type: application/json
+
+{
+	"ssid": "vos 1",
+	"led": true,
+	"accept_wrong": true,
+	"interval": 0,
+	"question": "Wat is de call van de Scouting Bolstergroep Riel?</br>A. PA1BVH/J</br>B. PI4SBR/J</br>C. PG2SGR/J",
+	"answer": "b",
+	"code": "Code: 5, loop via het voetbalpaadje naar de Heisteeg.",
+	"code_wrong": "Code: 7, loop via het voetbalpaadje naar de Heisteeg."
+}
+
+POST http://1.2.3.4/update HTTP/1.1
+content-type: application/json
+
+{
+	"ssid": "vos 2",
+	"led": true,
+	"accept_wrong": true,
+	"interval": 0,
+	"question": "Met wat voor soort 'golven' kun je zenden?</br></br>Open antwoord",
+	"answer": "Radiogolven",
+	"code": "Goed! Loop verder via de Kerstraat naar Hof van Tongerloo.",
+	"code_wrong": "Het goede antwoord is 'Radiogolven, Loop verder via de Kerstraat naar Hof van Tongerloo."
+}
+
+POST http://1.2.3.4/update HTTP/1.1
+content-type: application/json
+
+{
+	"ssid": "vos 3",
+	"led": true,
+	"accept_wrong": true,
+	"interval": 0,
+	"question": "HOe noem je het communiceren via de radio met geluidspiepjes?</br>A. Braille</br>B. Morse</br>C. Dabbe</br>D. Roger",
+	"answer": "b",
+	"code": "Code: 9, Loop verder via de branbantlaan naar Peelland.",
+	"code_wrong": "Code: 8 Loop verder via de branbantlaan naar Peelland."
+}
