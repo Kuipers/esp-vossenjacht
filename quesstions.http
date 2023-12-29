@@ -12,6 +12,8 @@ content-type: application/json
     "code": "Onthoud deze code: 5"
 }
 
+###
+
 # Add more advanced question with a code. When the aswer is correct, the code is shown.
 # When the answer is wrong, a green screen is shown and the code_wrong is shown.
 POST http://1.2.3.4/update HTTP/1.1
@@ -28,6 +30,8 @@ content-type: application/json
 	"code_wrong": "Code: 7, loop via het voetbalpaadje naar de Heisteeg."
 }
 
+###
+
 POST http://1.2.3.4/update HTTP/1.1
 content-type: application/json
 
@@ -41,6 +45,8 @@ content-type: application/json
 	"code": "Goed! Loop verder via de Kerstraat naar Hof van Tongerloo.",
 	"code_wrong": "Het goede antwoord is 'Radiogolven, Loop verder via de Kerstraat naar Hof van Tongerloo."
 }
+
+###
 
 POST http://1.2.3.4/update HTTP/1.1
 content-type: application/json
